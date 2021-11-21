@@ -12,12 +12,13 @@
 #ifndef CHECKOUTBOOK_H
 #define CHECKOUTBOOK_H
 
-#include "command.h"
+#include "librarycommand.h"
 #include <string>
+#include "library.h"
 
 using namespace std;
 
-class CheckoutBook : public Command {
+class CheckoutBook : public LibraryCommand {
 public:
    // -------------------------------------------------------------------------
    /** CheckoutBook()
@@ -42,7 +43,7 @@ public:
 private:
 
    // pointer to library object that this command exists in
-   // Library* library;
+   Library* library;
    
    // ID of patron this command uses
    string patronID;

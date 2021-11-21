@@ -12,12 +12,13 @@
 #ifndef DISPLAYLIBRARY_H
 #define DISPLAYLIBRARY_H
 
-#include "command.h"
+#include "librarycommand.h"
 #include <string>
+#include "library.h"
 
 using namespace std;
 
-class DisplayLibrary : public Command {
+class DisplayLibrary : public LibraryCommand {
 public:
    // -------------------------------------------------------------------------
    /** DisplayLibrary()
@@ -42,7 +43,7 @@ public:
 private:
 
    // pointer to library object that this command exists in
-   // Library* library;
+   Library* library;
    
 
 

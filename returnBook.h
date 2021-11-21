@@ -12,12 +12,12 @@
 #ifndef RETURNBOOK_H
 #define RETURNBOOK_H
 
-#include "command.h"
+#include "librarycommand.h"
 #include <string>
 
 using namespace std;
 
-class ReturnBook : public Command {
+class ReturnBook : public LibraryCommand {
 public:
    // -------------------------------------------------------------------------
    /** ReturnBook()

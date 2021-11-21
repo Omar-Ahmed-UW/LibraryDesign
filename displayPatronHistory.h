@@ -12,12 +12,13 @@
 #ifndef DISPLAYPATRONHISTORY_H
 #define DISPLAYPATRONHISTORY_H
 
-#include "command.h"
+#include "librarycommand.h"
 #include <string>
+#include "library.h"
 
 using namespace std;
 
-class DisplayPatronHistory : public Command {
+class DisplayPatronHistory : public LibraryCommand {
 public:
    // -------------------------------------------------------------------------
    /** DisplayPatronHistory()
@@ -42,7 +43,7 @@ public:
 private:
 
    // pointer to library object that this command exists in
-   // Library* library;
+   Library* library;
    
    // ID of patron this command uses
    string patronID;
