@@ -22,12 +22,13 @@
 #define BOOK_H
 
 #include <string>
+#include "BSTNode.h"
 
 using namespace std;
 
 // needs inheritance to BST data. book factory should befriend book for
 // instantiation
-class Book
+class Book : public BSTNode
 {
 public:
    // -------------------------------------------------------------------------
