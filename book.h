@@ -129,6 +129,18 @@ public:
     */
    virtual bool operator==(const Book& rhs) const = 0;
 
+      // -------------------------------------------------------------------------
+   /** create()
+    * Create book (for factory)
+    * 
+    * Creates a book instance
+    * @pre None
+    * @post new book object exists
+    * @return reference to new children's book
+    * 
+   */
+   virtual Book* create() const = 0;
+
 protected:
 
    // author of book
@@ -152,6 +164,10 @@ protected:
    // Total number of books available
    int maxCount;
 
+   //format of book
+   string format;
+
+   // current patrons checking out the book. max size is maxCount
    Patron** checkouts;
 };
 

@@ -42,6 +42,27 @@ public:
     */
    virtual void execute();
 
+   /** create()
+    * Create Library Command (factory)
+    * 
+    * Create a library command of the appropriate type
+    * this function is pure virtual
+    * @pre None
+    * @post a new library command exists
+   */
+   virtual LibraryCommand* create() const;
+
+   /** initialize()
+    * initialize command with data
+    * 
+    * Uses a string to put data into the command
+    * @pre string must be formatted properly
+    * @post the command now contains the data from the string
+    * @return string is not formmatedd correctly return false,
+    * else return true
+   */
+   virtual bool initialize(string data);
+
 private:
 
 
