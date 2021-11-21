@@ -150,6 +150,8 @@ protected:
 
    // Total number of books available
    int maxCount;
+
+   Patron** checkouts;
 };
 
 #endif
