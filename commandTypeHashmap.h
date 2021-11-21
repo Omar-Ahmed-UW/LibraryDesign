@@ -1,7 +1,7 @@
 /**
  * @file commandTypeHashmap.h
  * @author Mogul Solutions
- * 
+ *
  * Description:
  *   -Returns a LibraryCommand object described the desired type name
  *
@@ -9,7 +9,7 @@
  *   -Written entirely as static methods
  *   -Uses a hashtable to choose which command object to return in O(1)
  *   -Only capital single letters are valid to be the names of commands
-*/
+ */
 
 #ifndef ASS4_COMMANDTYPEHASHMAP_H
 #define ASS4_COMMANDTYPEHASHMAP_H
@@ -17,22 +17,23 @@
 #include <iostream>
 using namespace std;
 
-class CommandTypeHashmap {
+class CommandTypeHashmap
+{
 
 public:
-    /** getCommand
-     * Create Command Object
-     * 
-     * Returns the type of command indicated by the type given
-     * @param type A 1 capital character string indicating the type of command 
-     * @pre None
-     * @post Creates the object and returns it, nothing else
-     * @return The library command if type was valid, or nullptr otherwise
+   /** getCommand
+    * Create Command Object
+    *
+    * Returns the type of command indicated by the type given
+    * @param type A 1 capital character string indicating the type of command
+    * @pre None
+    * @post Creates the object and returns it, nothing else
+    * @return The library command if type was valid, or nullptr otherwise
     */
-    static LibraryCommand* getCommand(string type);
+   static LibraryCommand* getCommand(string type);
 
 private:
-    const string commandIDs[4] { "R", "C", "D", "H" };
+   const string commandIDs[4]{"R", "C", "D", "H"};
 };
 
 #endif
