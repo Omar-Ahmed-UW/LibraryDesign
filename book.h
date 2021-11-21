@@ -1,5 +1,5 @@
 /** @file book.h
- * @author Mogul Solutions
+ * @author Josh Helzerman
  * 
  * Description:
  *   - A book object represents a unique book and the number of copies available for that book at any given time
@@ -24,6 +24,8 @@
 
 using namespace std;
 
+
+// needs inheritance to BST data. book factory should befriend book for instantiation
 class Book {
 public:
 
@@ -122,6 +124,8 @@ public:
    */
    virtual bool operator==(const Book& rhs) const = 0;
 
+   
+
 
 protected:
    // author of book
@@ -135,6 +139,9 @@ protected:
 
    // month book was published
    int month;
+
+   // Id of the book
+   string bookID;
 
 private:
 
