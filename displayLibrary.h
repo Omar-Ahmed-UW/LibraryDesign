@@ -41,9 +41,7 @@ public:
     */
    virtual void execute();
 
-private:
-   // pointer to library object that this command exists in
-   Library* library;
+
 };
 
 #endif

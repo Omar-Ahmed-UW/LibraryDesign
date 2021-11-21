@@ -14,6 +14,8 @@
 #ifndef LIBRARYCOMMAND_H
 #define LIBRARYCOMMAND_H
 
+#include "library.h"
+
 using namespace std;
 
 class LibraryCommand
@@ -39,6 +41,9 @@ public:
     * @post TBD
     */
    virtual void execute() = 0;
+protected:
+   // pointer to library object that this command exists in
+   Library* library;
 };
 
 #endif
