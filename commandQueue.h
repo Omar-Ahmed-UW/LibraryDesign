@@ -14,8 +14,8 @@
 
 #ifndef ASS4_COMMANDQUEUE_H
 #define ASS4_COMMANDQUEUE_H
-#include <libraryCommand.h>
-#include <linkedListNode.h>
+#include "libraryCommand.h"
+#include "linkedListNode.h"
 using namespace std;
 
 class CommandQueue {

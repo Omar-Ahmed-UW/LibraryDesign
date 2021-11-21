@@ -13,7 +13,8 @@
 
 #ifndef ASS4_COMMANDTYPEHASHMAP_H
 #define ASS4_COMMANDTYPEHASHMAP_H
-#include <libraryCommand.h>
+#include "libraryCommand.h"
+#include <iostream>
 using namespace std;
 
 class CommandTypeHashmap {
@@ -28,10 +29,10 @@ public:
      * @post Creates the object and returns it, nothing else
      * @return The library command if type was valid, or nullptr otherwise
     */
-    static LibraryCommand* getCommand(String type) const;
+    static LibraryCommand* getCommand(string type);
 
 private:
-    static String[4] commandIDs { "R", "C", "D", "H" };
+    const string commandIDs[4] { "R", "C", "D", "H" };
 };
 
 #endif
