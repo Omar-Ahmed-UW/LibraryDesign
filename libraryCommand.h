@@ -16,6 +16,7 @@
 
 #include "library.h"
 
+
 using namespace std;
 
 class LibraryCommand
@@ -41,9 +42,39 @@ public:
     * @post TBD
     */
    virtual void execute() = 0;
+
 protected:
+
    // pointer to library object that this command exists in
    Library* library;
+
+   /** getBookDB()
+    * get Book database
+    * 
+    * retrieves the book database from the library object.
+    * LibraryCommand is a friend of Library object, so it 
+    * can access these private member variables. These references
+    * are used by LibraryCommand's children to edit the DB and
+    * their objects.
+    * @pre None.
+    * @post None.
+    * @return pointer to the BookDatabase inside of library
+   */
+   BookDatabase* getBookDB() const;
+
+   /** getPatronDB()
+    * get Patron database
+    * 
+    * retrieves the Patron database from the library object.
+    * LibraryCommand is a friend of Library object, so it 
+    * can access these private member variables. These references
+    * are used by LibraryCommand's children to edit the DB and
+    * their objects.
+    * @pre None.
+    * @post None.
+    * @return pointer to the PatronDatabase inside of library
+   */
+   PatronDatabase* getPatronDB() const;
 };
 
 #endif
