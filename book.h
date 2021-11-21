@@ -145,10 +145,11 @@ protected:
    // Id of the book
    string bookID;
 
-private:
-
    // copies of book available
    int count;
+
+   // Total number of books available
+   int maxCount;
 };
 
 #endif
