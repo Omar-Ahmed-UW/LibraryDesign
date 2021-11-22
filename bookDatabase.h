@@ -10,8 +10,8 @@
 #ifndef BOOKDATABASE_H
 #define BOOKDATABASE_H
 
-import "BST.h"
-import "book.h"
+#include "BST.h"
+#include "book.h"
 
 using namespace std;
 
