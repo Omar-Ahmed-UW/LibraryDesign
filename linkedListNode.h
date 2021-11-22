@@ -13,16 +13,17 @@
 
 #ifndef ASS4_LLNODE_H
 #define ASS4_LLNODE_H
+
 #include "libraryCommand.h"
+
 using namespace std;
 
-class LinkedListNode
-{
+class LinkedListNode {
 
 public:
-   LinkedListNode* next;
+    LinkedListNode* next;
 
-   /** LinkedListNode
+    /** LinkedListNode
     * Linked List Node Constructor
     *
     * Creates a Linked List Node with the given command
@@ -30,9 +31,9 @@ public:
     * @pre Command is complete, even if it is not valid
     * @post next is set to nullptr, stores the command
     */
-   LinkedListNode(LibraryCommand* command);
+    LinkedListNode(LibraryCommand* command);
 
-   /** ~LinkedListNode
+    /** ~LinkedListNode
     * Linked List Node Destructor
     *
     * Destroys the Linked List Node
@@ -40,9 +41,9 @@ public:
     * @pre None
     * @post Deallocates this node and its enclosed Library Command
     */
-   ~LinkedListNode();
+    ~LinkedListNode();
 
-   /** execute
+    /** execute
     * Execute Command
     *
     * Executes the enclosed Library Command
@@ -50,10 +51,10 @@ public:
     * @post The library command executed, this is unchanged
     * @return None
     */
-   void execute();
+    void execute();
 
 private:
-   LibraryCommand* command;
+    LibraryCommand* command;
 };
 
 #endif
