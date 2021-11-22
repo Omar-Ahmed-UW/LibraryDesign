@@ -76,6 +76,18 @@ public:
     * @return true if this book is equal to rhs, else false
     */
    virtual bool operator==(const Book& rhs) const;
+
+   // -------------------------------------------------------------------------
+   /** create()
+    * Create Periodical book
+    * 
+    * Creates a Periodical book instance
+    * @pre None
+    * @post new Periodical book object exists
+    * @return reference to new children's book
+    * 
+   */
+   Book* create() const;
 };
 
 #endif

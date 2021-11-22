@@ -21,11 +21,10 @@
 #include <iostream>
 using namespace std;
 
-class CommandFactory
-{
+class CommandFactory {
 
 public:
-   /** CommandFactory
+    /** CommandFactory
     * Command Factory Constructor
     *
     * Builds a CommandFactory for the inputted library
@@ -33,18 +32,18 @@ public:
     * @pre None
     * @post Stores private pointer to library
     */
-   CommandFactory(Library* library);
+    CommandFactory(Library* library);
 
-   /** ~CommandFactory
+    /** ~CommandFactory
     * Command Factory Destructor
     *
     * Destroys the CommandFactory
     * @pre None
     * @post Returns CommandFactory to memory, nothing else
     */
-   ~CommandFactory();
+    ~CommandFactory();
 
-   /** createCommands
+    /** createCommands
     * Create Commands
     *
     * Reads the file, creating LibraryCommands and storing them
@@ -54,10 +53,10 @@ public:
     * @post CommandQueue is initialized and filled. Library unchanged.
     * @return A filled CommandQueue object
     */
-   CommandQueue* createCommands(const ifstream* file);
+    CommandQueue* createCommands(ifstream file);
 
 private:
-   Library* library;
+    Library* library;
 };
 
 #endif

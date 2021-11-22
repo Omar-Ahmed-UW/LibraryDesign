@@ -14,6 +14,9 @@
 #ifndef LIBRARYCOMMAND_H
 #define LIBRARYCOMMAND_H
 
+#include "library.h"
+
+
 using namespace std;
 
 class LibraryCommand
@@ -39,6 +42,62 @@ public:
     * @post TBD
     */
    virtual void execute() = 0;
+
+      /** create()
+    * Create Library Command (factory)
+    * 
+    * Create a library command of the appropriate type
+    * this function is pure virtual
+    * @pre None
+    * @post a new library command exists
+   */
+   virtual LibraryCommand* create() const = 0;
+
+   /** initialize()
+    * initialize command with data
+    * 
+    * Uses a string to put data into the command
+    * @pre string must be formatted properly
+    * @post the command now contains the data from the string
+    * @return string is not formmatedd correctly return false,
+    * else return true
+   */
+   virtual bool initialize(string data) = 0;
+
+protected:
+
+   // pointer to library object that this command exists in
+   Library* library;
+
+   /** getBookDB()
+    * get Book database
+    * 
+    * retrieves the book database from the library object.
+    * LibraryCommand is a friend of Library object, so it 
+    * can access these private member variables. These references
+    * are used by LibraryCommand's children to edit the DB and
+    * their objects.
+    * @pre None.
+    * @post None.
+    * @return pointer to the BookDatabase inside of library
+   */
+   BookDatabase* getBookDB() const;
+
+   /** getPatronDB()
+    * get Patron database
+    * 
+    * retrieves the Patron database from the library object.
+    * LibraryCommand is a friend of Library object, so it 
+    * can access these private member variables. These references
+    * are used by LibraryCommand's children to edit the DB and
+    * their objects.
+    * @pre None.
+    * @post None.
+    * @return pointer to the PatronDatabase inside of library
+   */
+   PatronDatabase* getPatronDB() const;
+
+
 };
 
 #endif
