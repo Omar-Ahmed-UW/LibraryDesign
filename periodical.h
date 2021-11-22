@@ -80,13 +80,13 @@ public:
    // -------------------------------------------------------------------------
    /** create()
     * Create Periodical book
-    * 
+    *
     * Creates a Periodical book instance
     * @pre None
     * @post new Periodical book object exists
     * @return reference to new children's book
-    * 
-   */
+    *
+    */
    Book* create() const;
 };
 

@@ -21,8 +21,8 @@
 #ifndef BOOK_H
 #define BOOK_H
 
-#include <string>
 #include "BSTData.h"
+#include <string>
 
 using namespace std;
 
@@ -129,20 +129,19 @@ public:
     */
    virtual bool operator==(const Book& rhs) const = 0;
 
-      // -------------------------------------------------------------------------
+   // -------------------------------------------------------------------------
    /** create()
     * Create book (for factory)
-    * 
+    *
     * Creates a book instance
     * @pre None
     * @post new book object exists
     * @return reference to new children's book
-    * 
-   */
+    *
+    */
    virtual Book* create() const = 0;
 
 protected:
-
    // author of book
    string author;
 
@@ -164,7 +163,7 @@ protected:
    // Total number of books available
    int maxCount;
 
-   //format of book
+   // format of book
    string format;
 
    // current patrons checking out the book. max size is maxCount

@@ -79,15 +79,14 @@ public:
    // -------------------------------------------------------------------------
    /** create()
     * Create childrens book
-    * 
+    *
     * Creates a childrens book instance
     * @pre None
     * @post new childrens book object exists
     * @return reference to new children's book
-    * 
-   */
+    *
+    */
    Book* create() const;
-
 };
 
 #endif

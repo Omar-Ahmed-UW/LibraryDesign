@@ -19,10 +19,11 @@
 
 using namespace std;
 
-class CommandTypeHashmap {
+class CommandTypeHashmap
+{
 
 public:
-    /** getCommand
+   /** getCommand
     * Create Command Object
     *
     * Returns the type of command indicated by the type given
@@ -31,11 +32,11 @@ public:
     * @post Creates the object and returns it, nothing else
     * @return The library command if type was valid, or nullptr otherwise
     */
-    static LibraryCommand* getCommand(string type);
+   static LibraryCommand* getCommand(string type);
 
 private:
-    static int commandIDs[26];
-    static LibraryCommand* commands[4];
+   static int commandIDs[26];
+   static LibraryCommand* commands[4];
 };
 
 #endif

@@ -20,19 +20,20 @@
 
 using namespace std;
 
-class CommandQueue {
+class CommandQueue
+{
 
 public:
-    /** CommandQueue
+   /** CommandQueue
     * Command Queue Constructor
     *
     * Creates an empty CommandQueue
     * @pre None
     * @post front and back are set to nullptr
     */
-    CommandQueue();
+   CommandQueue();
 
-    /** ~CommandQueue
+   /** ~CommandQueue
     * Command Queue Destructor
     *
     * Destroys the Command Queue and all commands within it
@@ -40,9 +41,9 @@ public:
     * @post Deallocates all memory for the Command Queue,
     * and all Linked List Nodes, and Library Command objects contained
     */
-    ~CommandQueue();
+   ~CommandQueue();
 
-    /** enqueue
+   /** enqueue
     * Enqueue Command
     *
     * Inserts the given command into the back of the queue
@@ -51,9 +52,9 @@ public:
     * @post Command is added to the back of the queue, if successful
     * @return Returns true if command was successfully enqueued
     */
-    bool enqueue(LibraryCommand* command);
+   bool enqueue(LibraryCommand* command);
 
-    /** executeNext
+   /** executeNext
     * Execute Next Command
     *
     * Executes the next command in the queue
@@ -61,9 +62,9 @@ public:
     * @post Executes and deletes the frontmost command
     * @return Returns true if the command was successfully executed
     */
-    bool executeNext();
+   bool executeNext();
 
-    /** isEmpty
+   /** isEmpty
     * Check if Empty
     *
     * Returns if the Command Queue is currently Empty
@@ -71,11 +72,11 @@ public:
     * @post No changes made
     * @return Returns if the queue is empty
     */
-    bool isEmpty() const;
+   bool isEmpty() const;
 
 private:
-    LinkedListNode* front;
-    LinkedListNode* back;
+   LinkedListNode* front;
+   LinkedListNode* back;
 };
 
 #endif
