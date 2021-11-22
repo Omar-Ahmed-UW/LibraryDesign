@@ -15,7 +15,7 @@
 
 using namespace std;
 
-class BookDatabase : public BookDatabase
+class BookDatabase
 {
     public:
 
@@ -53,7 +53,7 @@ class BookDatabase : public BookDatabase
     * @post None. const function
     * @return bool returns true if the book is able to be retrieved and displayed
     */
-    bool displayBook(String bookId) const;
+    bool displayBook(string bookId) const;
     
     //--------------------------------------------------------------------------
     /** getBook(String bookId)
@@ -64,7 +64,7 @@ class BookDatabase : public BookDatabase
     * @post None. const function
     * @return Book* representing the Book object that they are looking for if found
     */
-    Book* getBook(String bookId) const;
+    Book* getBook(string bookId) const;
     
     //--------------------------------------------------------------------------
     /** displayAll() const
@@ -85,7 +85,7 @@ class BookDatabase : public BookDatabase
     BST<Book> fictionBST;
 
     //BST for periodical
-    BST<Book> periodicalBST
+    BST<Book> periodicalBST;
    
     //BST for children book
     BST<Book> childrenBST;
