@@ -35,8 +35,8 @@ public:
    /** execute()
     * Execute checkout book command
     *
-    * adds selected book to the patron's current books and decrements the 
-    * book's count. It searches for the book by creating a book with the 
+    * adds selected book to the patron's current books and decrements the
+    * book's count. It searches for the book by creating a book with the
     * bookID. then comparing that to books in the BST
     * @pre The patron and book should exist in the system
     * @post patron and book are updated accordingly
@@ -44,8 +44,6 @@ public:
    virtual void execute();
 
 private:
-
-
    // ID of patron this command uses
    string patronID;
 

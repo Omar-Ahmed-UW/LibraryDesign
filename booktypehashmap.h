@@ -3,14 +3,14 @@
  *
  * Description:
  *   - A BookTypeHashmap object represents a specifically made hashmap
- * ADT used to store the various books that are in a library 
- * corresponding with the letters in the Alphabet. 
+ * ADT used to store the various books that are in a library
+ * corresponding with the letters in the Alphabet.
  *   - Can store any book name of any subtype of Book.
  *   - Can retrieve the ID of a certain Book object in a library.
  *
  *
  * Implementation:
- *   - This is a hashmap ADT of Books. 
+ *   - This is a hashmap ADT of Books.
  *   - It contains an int array of size 26 holding all booktype IDs.
  *   - Retreives any ID of a book using bookTypeID array.
  */
@@ -25,8 +25,7 @@ using namespace std;
 class BookTypeHashMap
 {
 public:
-
-// -------------------------------------------------------------------------
+   // -------------------------------------------------------------------------
    /** getID()
     * Accessor Function
     *
@@ -36,13 +35,12 @@ public:
     * @pre Book book.
     * @post int.
     */
-    int getID(Book book);
+   int getID(Book book);
 
 private:
-
-    // int array of bookIDs that can be searched to retrieve any id for a book
-    //  the exists in it.
-    int bookTypeID[26];
+   // int array of bookIDs that can be searched to retrieve any id for a book
+   //  the exists in it.
+   int bookTypeID[26];
 };
 
 #endif
